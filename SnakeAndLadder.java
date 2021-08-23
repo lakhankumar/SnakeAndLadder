@@ -9,10 +9,12 @@ public class SnakeAndLadder {
 	        int noPlay = 0;
 	        int ladder = 1;
 	        int snake = 2;
-	        int winningPosition=100;
+	        int winningPosition = 100;
+	        int count = 0; 
 	        System.out.println("The initial position of a player is : "+startPosition);
 	        
 	        while(currentPosition<=winningPosition){
+	        	count++;
 	            int diceNumber = ThreadLocalRandom.current().nextInt(1,6);
 	            int nextMove = ThreadLocalRandom.current().nextInt(0, 2);
 	            System.out.println("Random dice number generated is : "+diceNumber);
@@ -40,6 +42,7 @@ public class SnakeAndLadder {
 	            }
 	         System.out.println("The current position of a player is: "+currentPosition);
 		}
+	        System.out.println("The total no.of times dice was rolled is : "+count);
 	}
 
 }
