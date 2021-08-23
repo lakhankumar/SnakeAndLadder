@@ -32,6 +32,12 @@ public class SnakeAndLadder {
 	                    currentPosition = currentPosition - diceNumber;
 	                }
 	            }
+	            if (currentPosition > winningPosition) {
+	                currentPosition = currentPosition - diceNumber;
+	            }else if (currentPosition == winningPosition){
+	                System.out.println("The current position of a player is: "+currentPosition);
+	                break;
+	            }
 	         System.out.println("The current position of a player is: "+currentPosition);
 		}
 	}
